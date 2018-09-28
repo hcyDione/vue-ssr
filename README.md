@@ -20,27 +20,27 @@ npm run dev
 # 使用方法
 
 正常打包的时候：
-在development情况下：
-css不分离打包 vue里面内嵌的还是styl都不分离打包, 和js会生成bundle.js文件 引入之后会自动生成script,css等
-在production情况下：
-css打包的时候是会extraCSS的,把vue里面的css也会分离出来和styl共同打包成一个styles.[hash].css的文件
-![avatar]()
-服务端渲染要特别注意的是：
-开发环境下:
-"build:client": "cross-env NODE_ENV=development webpack --config build/webpack.config.client.js",
-和
-"dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js",
-和
-"dev:server": "cross-env NODE_ENV=development nodemon server/server.js",
-这三个是配套使用的
-生产环境的时候
-"build:client": "cross-env NODE_ENV=production webpack --config build/webpack.config.client.js",
-和
-"build:server": "cross-env NODE_ENV=production webpack --config build/webpack.config.server.js",
-和
-"start": "cross-env NODE_ENV=production node server/server.js"
-这三个是配套使用的
-一定要注意分析区别
+  > 在development情况下：
+  > css不分离打包 vue里面内嵌的还是styl都不分离打包, 和js会生成bundle.js文件 引入之后会自动生成script,css等
+  > 在production情况下：
+  > css打包的时候是会extraCSS的,把vue里面的css也会分离出来和styl共同打包成一个styles.[hash].css的文件
+[comment]: <> (![avatar]())
+  > 服务端渲染要特别注意的是：
+  > 开发环境下:
+  > "build:client": "cross-env NODE_ENV=development webpack --config build/webpack.config.client.js",
+  > 和
+  > "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js",
+  > 和
+  > "dev:server": "cross-env NODE_ENV=development nodemon server/server.js",
+  > 这三个是配套使用的
+  > 生产环境的时候
+  > "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.config.client.js",
+  > 和
+  > "build:server": "cross-env NODE_ENV=production webpack --config build/webpack.config.server.js",
+  > 和
+  > "start": "cross-env NODE_ENV=production node server/server.js"
+  > 这三个是配套使用的
+  > 一定要注意分析区别
 ```
 npm i webpack-merge -D
 访问到的是一个目录结构,而不是一个页面
